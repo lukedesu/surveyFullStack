@@ -15,5 +15,7 @@ $ git commit -a -m 'some comments'
 $ git push heroku master
 ```
 
-### Keys
-## google + api https://console.developers.google.com
+### API Keys
+## google https://console.developers.google.com
+## facebook https://developers.facebook.com
+## Mlab https://mlab.com
