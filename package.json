@@ -16,7 +16,8 @@
   "dependencies": {
     "express": "^4.15.4",
     "nodemon": "^1.11.0",
-    "passport": "^0.4.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
     "passport-google-oauth20": "^1.0.0"
   }
 }
