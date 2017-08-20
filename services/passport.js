@@ -51,10 +51,19 @@ passport.use(
       proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
-      console.log(accessToken);
-      console.log(refreshToken);
-      console.log(profile);
-      console.log(done);
+      User.findOne({ facebookId: profile.id }).then(existingUser => {
+        if (existingUser) {
+          // already has it
+          done(null, existingUser);
+        } else {
+          // new user
+          new User({
+            facebookId: profile.id
+          })
+            .save()
+            .then(user => done(null, user));
+        }
+      });
     }
   )
 );
