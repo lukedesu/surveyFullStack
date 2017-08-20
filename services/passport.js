@@ -51,18 +51,18 @@ passport.use(
       proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleId: profile.id }).then(existingUser => {
-        if (existingUser) {
-          // already has it
-          done(null, existingUser);
-        } else {
-          // new user
-          new User({
-            googleId: profile.id
-          })
-            .save()
-            .then(user => done(null, user));
-        }
-    }
+    //   User.findOne({ googleId: profile.id }).then(existingUser => {
+    //     if (existingUser) {
+    //       // already has it
+    //       done(null, existingUser);
+    //     } else {
+    //       // new user
+    //       new User({
+    //         googleId: profile.id
+    //       })
+    //         .save()
+    //         .then(user => done(null, user));
+    //     }
+    // }
   )
 );
