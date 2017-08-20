@@ -17,17 +17,20 @@ module.exports = app => {
     })
   );
 
-  app.get(
-    '/auth/facebook/callback',
-    passport.authenticate('facebook', {
-      successRedirect: '/success',
-      failureRedirect: '/'
-    })
-  );
+  app.get('/auth/facebook/callback', passport.authenticate('facebook'));
+
+  app.get('/api/current_user', (req, res) => {
+    res.send(req.session);
+  });
+
+  app.get('/api/logout', (req, res) => {
+    req.logout();
+    res.send(req.user);
+  });
 
   app.get('/', (req, res) => {
     res.send(
-      '<a href="http://localhost:5000/auth/google">google</a> - <a href="http://localhost:5000/auth/facebook">facebook</a>'
+      '<a href="/auth/google">google</a> - <a href="/auth/facebook">facebook</a>'
     );
   });
 };

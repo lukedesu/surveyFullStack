@@ -4,7 +4,7 @@
 ```sh
 $ heroku create
 $ heroku rename yalevanrental
-$ git remote add heroku https://git.heroku.com/salty-wave-92523.git
+$ git remote add heroku  https://git.heroku.com/yalevanrental.git
 $ git push heroku master
 $ heroku open
 ```
@@ -16,6 +16,6 @@ $ git push heroku master
 ```
 
 ### API Keys
-## google https://console.developers.google.com
-## facebook https://developers.facebook.com
-## Mlab https://mlab.com
+* google https://console.developers.google.com
+* facebook https://developers.facebook.com
+* Mlab https://mlab.com
