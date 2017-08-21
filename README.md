@@ -1,3 +1,8 @@
+# Development Script
+```sh
+$ yarn dev
+```
+
 # Deployment Process
 
 ### First time deploy (Heroku)
