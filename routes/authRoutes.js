@@ -33,10 +33,4 @@ module.exports = app => {
     req.logout();
     res.redirect('/');
   });
-
-  app.get('/', (req, res) => {
-    res.send(
-      '<a href="/auth/google">google</a> - <a href="/auth/facebook">facebook</a>'
-    );
-  });
 };
