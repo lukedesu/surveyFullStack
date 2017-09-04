@@ -60,6 +60,10 @@ class SignIn extends Component {
               </button>
             </div>
           </div>
+          <div className="row">
+            Login with <a href="/auth/google">Google</a> or{' '}
+            <a href="/auth/facebook">Facebook</a>
+          </div>
         </form>
       </div>
     );
